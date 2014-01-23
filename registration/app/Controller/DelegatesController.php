@@ -6,7 +6,7 @@ class DelegatesController extends AppController
 	
 	function index()
 	{
-		$councilList = array("UNOOSA","UNGA-DISEC","HSC","HRC","UNEP");
+		$councilList = array("UNOOSA"=>"UNOOSA","UNGA-DISEC"=>"UNGA-DISEC","HSC"=>"HSC","HRC"=>"HRC","UNEP"=>"UNEP");
 		$this->set("councilList",$councilList);
 		if ($this->request->is('post'))
 		{

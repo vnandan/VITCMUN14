@@ -4,6 +4,9 @@ echo $this->Form->input('name');
 echo $this->Form->input('institution');
 echo $this->Form->input('email');
 echo $this->Form->input('contact');
+echo $this->Form->input('munasdelegate');
+echo $this->Form->input('munaseb');
+
 echo $this->Form->input('Firstpreference.council',array('label' => 'First Council Preference','type' => 'select', 'options' => $councilList));
 echo $this->Form->input('Firstpreference.country1',array('label' => 'Country Preference 1'));
 echo $this->Form->input('Firstpreference.country2',array('label' => 'Country Preference 2'));
