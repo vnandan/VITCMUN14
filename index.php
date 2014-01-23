@@ -29,10 +29,10 @@
     body{
       <?php 
       $img_arr = array('1','2','3','4');
-      ?>
+     ?>
     	background: url("assets/img/mun/pic<?php echo rand(1,count($img_arr));?>.JPG") no-repeat center center fixed ;
       background-size: 100% 100%;
-
+      
     }
 
     #full-screen-slider {
@@ -74,6 +74,7 @@
   h1
   {
     font-size: 9em;
+    font-weight: 100;
   }
   h6
   {
