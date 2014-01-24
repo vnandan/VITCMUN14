@@ -98,30 +98,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    $('.carousel').carousel({
-    	 interval: 6000,
-    	 pause: false
-    	});
-    $('.carousel').carousel('cycle');
 
-
-    $(document).ready(function() {
-  function setFullScreen() {
-    browserHeight = $(window).height() - 70;
-    $("#full-screen-slider .carousel-inner .item img").css({
-      height: browserHeight
-    });
-  }
-
-  setFullScreen();
-
-  $(window).resize(function() {
-    setFullScreen();
-  });
-});
-    
-	</script>
   </body>
 </html>
 

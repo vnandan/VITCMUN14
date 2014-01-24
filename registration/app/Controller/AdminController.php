@@ -3,7 +3,7 @@ class AdminController extends AppController
 {
 	function index()
 	{
-		
+		$this->set("totalRegistrations",$this->Admin->Delegate->find('count'));
 	}
 	
 	
@@ -11,6 +11,48 @@ class AdminController extends AppController
 	
 	function view($council,$preference)
 	{
+		$this->set('preference',$preference);
+		$this->set('council',$council);
+		$country = array();
+		
+		if($council=='UNOOSA')
+		{
+			$countrynames = ["india","japan","pakistan","indonesia"];
+		}
+		else
+		if($council=='UNGA-DISEC')
+		{
+			$countrynames = ["india","japan","pakistan","indonesia"];
+		}
+		else
+		if($council=='HSC')
+		{
+			$countrynames = ["india","japan","pakistan","indonesia"];
+		}
+		else
+		if($council=='HRC')
+		{
+			$countrynames = ["india","japan","pakistan","indonesia"];
+		}
+		else
+		if($council=='UNEP')
+		{
+			$countrynames = ["india","japan","pakistan","indonesia"];
+		}
+		
+		foreach($countrynames as $name)
+		{
+			$country["$name"] = $name;
+		}
+		$result = $this->Admin->Delegate->Allotment->query("SELECT DISTINCT country from ALLOTMENTS");
+		$existing = array();
+		foreach($result as $c)
+		{
+			array_push($existing,$c['ALLOTMENTS']['country']);
+		}
+		$uniqueCountry = array_diff($country,$existing);
+		$this->set("uniqueCountry",$uniqueCountry);
+		
 		switch($preference)
 		{
 			case 1:
@@ -32,60 +74,45 @@ class AdminController extends AppController
 		}
 	}
 	
-	public function allot()
+	public function allot($delegate_id,$council,$countryname)
 	{
-		$country = array();
-		$countrynames = ["india","japan","pakistan","indonesia"];
-		foreach($countrynames as $name)
-		{
-			$country["$name"] = $name;
-		}
-		$result = $this->Admin->Delegate->Allotment->query("SELECT DISTINCT country from ALLOTMENTS");
-		$existing = array();
-		foreach($result as $c)
-		{
-			array_push($existing,$c['ALLOTMENTS']['country']);
-		}
-		$uniqueCountry = array_diff($country,$existing);
-		$this->set("country",$uniqueCountry);
 		
-		$this->Session->userId = 1;
-		if($this->request->is('post'))
-		{
+		//$this->Session->userId = 1;
 		
-		$this->request->data['Allotment']['delegate_id']=1;
+		$this->request->data['Allotment']['delegate_id']=$delegate_id;
+		$this->request->data['Allotment']['council']=$council;
+		$this->request->data['Allotment']['country']=$countryname;
+		
 		$this->Admin->Delegate->Allotment->create();
 		if ($this->Admin->Delegate->Allotment->save($this->request->data))
 		{
-		$this->Admin->Delegate->read(null, 1);
-		$this->Admin->Delegate->set(array('alloted' => 1));
-		$this->Admin->Delegate->save();
-		$this->Session->setFlash("Allotment made.");
-		return $this->redirect(array(’/delegates’));
-		}
-		$this->Session->setFlash("Unable to allot.");
+		$this->Admin->Delegate->id=$delegate_id;
+		$this->Admin->Delegate->saveField('alloted',1);
+		//$this->Admin->Delegate->read(null, 1);
+		//$this->Admin->Delegate->set(array('alloted' => 1));
+		//$this->Admin->Delegate->save();
+		//$this->Session->setFlash("Allotment made.");
 		
 		}
-		else
-		{
-		
-		}
-		
+		//$this->Session->setFlash("Unable to allot.");
+
 	}
 	
 	function unallot($delegate_id=null)
 	{
 		if(!$delegate_id)
 		{
-			$this->Session->setFlash("Invalid Id");
+			echo "invalid Id";
 		}
 		else
 		{
 			if($this->Admin->Delegate->Allotment->deleteAll(array('Allotment.delegate_id' => $delegate_id)))
 			{
-			$this->Admin->Delegate->read(null, 1);
-			$this->Admin->Delegate->set(array('alloted' => 0));
-			$this->Admin->Delegate->save();
+			$this->Admin->Delegate->id=$delegate_id;
+			$this->Admin->Delegate->saveField('alloted',0);
+			//$this->Admin->Delegate->read(null, 1);
+			//$this->Admin->Delegate->set(array('alloted' => 0));
+			//$this->Admin->Delegate->save();
 			$this->Session->setFlash("Allotment Deleted");
 			}
 		

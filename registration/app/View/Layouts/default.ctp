@@ -37,6 +37,11 @@
     	/*background-color: black;*/
     }
 
+    #content
+    {
+    	margin-top: 100px;
+    }
+
    h1,h6
   {
     text-align: center;
@@ -59,7 +64,7 @@
   }
   .navbar-inverse
   {
-    background-color: #000;
+    /*background-color: #000;*/
   }
 
     </style>
@@ -81,7 +86,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="committees.html">COMMITTEES</a></li>
             <li><a href="works.html">REGISTRATIONS</a></li>
@@ -93,7 +98,7 @@
 
 
   <div id="content">
-    
+    <?php echo $this->fetch('content');?>
   </div>
 
 
@@ -107,31 +112,6 @@
     <?php
     $this->Html->script('bootstrap.min');
     ?>
-    <script type="text/javascript">
-    $('.carousel').carousel({
-    	 interval: 6000,
-    	 pause: false
-    	});
-    $('.carousel').carousel('cycle');
-
-
-    $(document).ready(function() {
-  function setFullScreen() {
-    browserHeight = $(window).height() - 70;
-    $("#full-screen-slider .carousel-inner .item img").css({
-      height: browserHeight
-    });
-  }
-
-  setFullScreen();
-
-  $(window).resize(function() {
-    setFullScreen();
-  });
-});
-    
-	</script>
-
-  </body>
+      </body>
 </html>
 

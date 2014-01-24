@@ -2,6 +2,6 @@
 class Allotment extends AppModel
 {
 	var $name = "Allotment";
-	var $belongsTo = array("Delegate","Admin");	
+	var $belongsTo = array("Delegate");	
 }
 ?>

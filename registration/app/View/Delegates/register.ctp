@@ -25,3 +25,4 @@ echo $this->Form->input('previousxp');
 echo $this->Form->input('accomodation');
 echo $this->Form->end('Register');
 ?>
+<div class="error-message"></div>
