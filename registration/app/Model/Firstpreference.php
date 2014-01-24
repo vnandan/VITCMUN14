@@ -3,7 +3,7 @@ class Firstpreference extends AppModel
 {
 	var $name = "Firstpreference";
 	var $belongsTo = array("Delegate");
-	
+	/*
 	public $validate = array(
 				 'delegate_id' => array('rule' => 'numeric',
 							'required' => true,
@@ -28,5 +28,6 @@ class Firstpreference extends AppModel
 						)
 				 
 				 );
+				 */
 }
 ?>
