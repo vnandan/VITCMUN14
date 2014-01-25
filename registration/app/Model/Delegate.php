@@ -7,7 +7,8 @@ class Delegate extends AppModel
 	public $validate = array(
 		
 				'name' => array(
-						'rule' => array('alphanumeric','maxLength'=>60),
+						//'rule' => array('alphanumeric','maxLength'=>60),
+						'rule' => '/^[a-zA-Z\s]{1,60}$/i',
 						'allowEmpty' => false,
 						'required'=>true,
 						'message' => 'Check the name.'
@@ -76,7 +77,7 @@ class Delegate extends AppModel
 						),
 				
 				'accomodation'=> array(
-						'rule'=>array('inList',array(0,1)),
+						'rule'=>array('inList',array('0','1')),
 						'message' => 'Only selection is allowed.'
 						)
 				

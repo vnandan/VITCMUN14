@@ -31,4 +31,16 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
     var $helpers = array('Html', 'Form', 'Session');
+    var $components = array('Auth');   
+ 
+  
+    public function beforeFilter() {
+        /* set actions that will not require login */
+       // $this->Auth->allow('index','display', 'view');
+        //$this->Auth->allow('login');
+    }
+    
+        
+// only allow the login controllers only
+ 
 }

@@ -4,6 +4,7 @@
     background: #FFF;
     font-family: Arial;
     }
+
 </style>
 <script>
     function unallot(delegate_id)
@@ -26,29 +27,33 @@
         });
     }
     
-</script>
-<pre>
-<?php
-
-//echo count($alloted); echo count($unalloted);
-    if(isset($error))
+    function gotoCouncil()
     {
-        echo $error;
-        exit;
+        //alert($("#selectCouncil :selected").text());
+        window.location = "/VITCMUN14/registration/users/view/"+$("#selectCouncil :selected").text()+"/"+$("#selectPreference :selected").text();
     }
- //echo "<h1>UNALLOTED DELEGATES</h1>";
- //print_r(unserialize($unalloted));
- 
- $unalloted = unserialize($unalloted);
- //echo "<h1>ALLOTED DELEGATES</h1>";
- //print_r(unserialize($alloted));
- $alloted = unserialize($alloted);
- 
-// print_r($unalloted);
-//print_r($alloted);
+    $(document).ready(function()
+                      {
+                        
+                        $('#selectCouncil option[value="<?php echo array_search($council,$councilNameList);?>"]').attr('selected','selected');
+                        $('#selectPreference option[value="<?php echo $preference-1;?>"]').attr('selected','selected');
+                        });
 
+
+</script>
+<table>
+<?php
+echo "<tr><td>".$this->Form->input('selectCouncil', array('type'=>'select','options'=>$councilNameList, 'value'=>$councilNameList , 'label'=>'Council', 'style'=>'display: inline'))."</td>";
+echo "<td>".$this->Form->input('selectPreference', array('type'=>'select', 'label'=>'Preference','options'=>array('1','2','3'), 'style'=>'display: inline'))."</td>";
+echo "<td>".$this->Form->input('Go!',array('type'=>'button','id'=>'goCouncil','onclick'=>'gotoCouncil(this.value)', 'label'=>false, 'style'=>'display: inline', 'class'=>'btn btn-sm btn-primary'))."</td>";
 ?>
-</pre>
+</table>
+
+<?php
+ $unalloted = unserialize($unalloted);
+ $alloted = unserialize($alloted);
+?>
+
 
 <?php
 //echo count($unalloted);

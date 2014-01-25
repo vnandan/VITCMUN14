@@ -1,7 +1,8 @@
 <?php
-class Admin extends AppModel
+class User extends AppModel
 {
-    var $name = "Admin";
+    var $name = "User";
     var $hasMany = array("Delegate","Allotment","Firstpreference","SecondPreference","ThirdPreference");
+    
 }
 ?>

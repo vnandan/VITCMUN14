@@ -35,6 +35,10 @@ class DelegatesController extends AppController
 		$result = $this->Delegate->find("all", array('conditions' => array('name like' => "%$delegateName%")));	
 		$this->set('delegates',$result);	
 	}
+
+
+ 	
+ 
 	
 }
 ?>
