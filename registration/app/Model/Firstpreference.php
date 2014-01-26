@@ -3,31 +3,32 @@ class Firstpreference extends AppModel
 {
 	var $name = "Firstpreference";
 	var $belongsTo = array("Delegate");
-	/*
+	
 	public $validate = array(
-				 'delegate_id' => array('rule' => 'numeric',
-							'required' => true,
-							'message' => 'country name misspelled'
-							),
+				 
 				 'council' => array('rule' => array('inList', array("UNOOSA","UNGA-DISEC","HRC","HSC","UNEP")),
 						    'required' => true,
-						    'message' => 'country name misspelled'
+							'allowEmpty' => false,
+						    'message' => 'Check council name.'
 						    
 						),
-				 'country1' => array('rule' => 'alphaNumeric',
+				 'country1' => array('rule' => '/^[a-zA-Z\s\.\-]{1,40}$/i',
 						     'required' => true,
-						     'message' => 'country name misspelled'
+							 'allowEmpty' => false,
+						     'message' => 'Check the country name.'
 						),
-				 'country2' => array('rule' => 'alphaNumeric',
+				 'country2' => array('rule' => '/^[a-zA-Z\s\.\-]{1,40}$/i',
 						     'required' => true,
-						     'message' => 'country name misspelled'
+							 'allowEmpty' => false,
+						     'message' => 'Check the country name.'
 						),
-				 'country3' => array('rule' => 'alphaNumeric',
+				 'country3' => array('rule' => '/^[a-zA-Z\s\.\-]{1,40}$/i',
 						     'required' => true,
-						     'message' => 'country name misspelled'
+							 'allowEmpty' => false,
+						     'message' => 'Check the country name.'
 						)
 				 
 				 );
-				 */
+				 
 }
 ?>

@@ -15,7 +15,7 @@ class Delegate extends AppModel
 						),
 				
 				'institution' => array(
-						'rule' => array('alphanumeric','maxLength'=>100),
+						'rule' => '/^[a-zA-Z\s\'\.]{1,100}$/i',
 						'allowEmpty' => false,
 						'required'=>true,
 						'message' => 'Check your institution name.'
@@ -29,7 +29,7 @@ class Delegate extends AppModel
 						),
 					'contactlength'=> array(
 								'rule'	=> array('between',10,11),
-								'message' => 'Contact number must be less than 12 digits'
+								'message' => 'Contact number must be 10 or 11 digits'
 								)
 						),
 				'email' => array(

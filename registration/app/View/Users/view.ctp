@@ -41,14 +41,17 @@
 
 
 </script>
-<table>
+<div>
+<table style="display: inline;">
 <?php
 echo "<tr><td>".$this->Form->input('selectCouncil', array('type'=>'select','options'=>$councilNameList, 'value'=>$councilNameList , 'label'=>'Council', 'style'=>'display: inline'))."</td>";
 echo "<td>".$this->Form->input('selectPreference', array('type'=>'select', 'label'=>'Preference','options'=>array('1','2','3'), 'style'=>'display: inline'))."</td>";
 echo "<td>".$this->Form->input('Go!',array('type'=>'button','id'=>'goCouncil','onclick'=>'gotoCouncil(this.value)', 'label'=>false, 'style'=>'display: inline', 'class'=>'btn btn-sm btn-primary'))."</td>";
-?>
-</table>
+echo "</tr></table>";
 
+?>
+<a href='/VITCMUN14/registration/users/logout' class='btn btn-danger btn-md pull-right' >Logout</a>
+</div>
 <?php
  $unalloted = unserialize($unalloted);
  $alloted = unserialize($alloted);

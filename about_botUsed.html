@@ -18,7 +18,6 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
-     <link href="assets/css/tabs.css" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -27,22 +26,128 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 	<style>
-	 body
-    {
-    	background: white;
-    	font-weight: 400;
-    }
-    .head
-    {
-    	display: block;
-    	text-decoration: underline;
-    	text-transform: uppercase;
-    }
-    #logo
-    {
-    margin-bottom: -20px !important;
-    margin-top: -10px !important;
-    }
+	body{
+		font-weight: 400;
+	}
+
+	#sidebar
+	{
+	/*margin-left:20px;*/
+	margin-top:30px;
+	/*background:#B4B1B1;*/
+	border-radius:5px;
+	position:fixed;
+	}
+	#sidebar.nish-link1
+	{
+	border-top:2px solid #fff;
+	border-bottom:2px solid #fff;
+	}
+	#sidebar li
+	{
+		padding:3px;
+		background: #222222;
+	}
+	#sidebar li:hover
+	{
+		border-radius:5px;
+		
+	}
+	
+	#sidebar a:hover
+	{
+		background: #FF7878;
+	}
+	#sidebar a:active
+	{
+		background: #FF7878;
+		border-right:1px solid white;
+	}
+	
+	.affix-top,.affix{
+	position: fixed;
+	}
+	
+	.content-head
+	{
+		background:none;
+		height:80px;
+	}
+		@media (min-width: 1200) {
+	#sidebar.affix-top {
+    position: fixed;
+  	margin-top:30px;
+  	width:228px;
+	}
+  
+	#sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+	}
+	}
+		
+		
+		@media (min-width: 979px) {
+	#sidebar.affix-top {
+    position: fixed;
+  	margin-top:30px;
+  	width:228px;
+	}
+  
+	#sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+	}
+	}
+	
+	@media (min-width: 800px) {
+	#sidebar.affix-top {
+    position: fixed;
+  	margin-top:30px;
+  	width:228px;
+	}
+  
+	#sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+	}
+	}
+	
+	@media (min-width: 768px) {
+	#sidebar.affix-top {
+    position: fixed;
+  	margin-top:30px;
+  	width:228px;
+	}
+  
+	#sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+	}
+	}
+	
+	@media (min-width: 600px) {
+	#sidebar.affix-top {
+    position: fixed;
+  	margin-top:30px;
+  	width:180px;
+	}
+  
+	#sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:180px;
+	}
+	}
+
+	/*#sidebar li.active {
+  	border:0 #eee solid;
+  	border-right-width:4px;
+	}*/
 
 	</style>
   </head>
@@ -71,23 +176,24 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-	 <div class="container">
-    <div class="row">
-    <div class="col-md-12">
-          	
-      <!-- tabs left -->
-      <div class="tabbable tabs-left">
-        <ul class="nav nav-tabs" style="height: 430px;">
-          <li><a href="#a" data-toggle="tab">VIT UNIVERSITY</a></li>
-          <li><a href="#b" data-toggle="tab">DEBATE SOCIETY</a></li>
-          <li><a href="#c" data-toggle="tab">SECRITARIAT</a></li>
-        </ul>
-        <div class="tab-content">
-         <div class="tab-pane active" id="a">	
-         	<h2 >VIT Chennai</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-4" id="leftCol">              
+              	<ul class="nav nav-stacked" id="sidebar">
+                  <li ><a href="#sec0">VIT UNIVERSITY</a></li>
+                  <li ><a href="#sec1">DEBSOC</a></li>
+                  <li ><a href="#sec2">SECRITARIAT</a></li>
+              	</ul>              
+      		</div>
+			
+				<div class="col-md-8 col-xs-8" style="margin-top: -30px;">
+				
+				<div id="sec0">
+				<div class="content-head"> </div>
+              	<h2 >VIT Chennai</h2>
                 <p>VIT University for the past 25 years has made a mark in the field of higher education in India imparting quality education in a cross-cultural ambience , intertwined with extensive application oriented research. Established by well-known educationalistand former Parliamentarian ,Dr. G Vishwanathan,Founder and Chandellor,is a visionary who  transformed VIT into a center of excellence in higher technical education. His dream has taken the shape of VIT Chennai. Spearheaded by Mr.G.V.Selvam, Vice President, the  institution is making leaps and bounds in professional programs close to the heart of Chennai City. The Vice President has a mission to make this a global center with the latest learning facilities. Dr. Anand A. Samuel, Pro-Vice Chancellor leads the team in Chennai with the following objectives:</p>
 
-                <p><ol style="margin-left: 200px;">
+                <ol>
                 	<li>To maximize Industrial Connectivity.</li>
                 	<li>To create Centers of Excellence in niche areas ofresearch.</li>
 					<li>To enrich Technological and Managerial Human Capital nurtured in a multicultural ambience.</li>
@@ -95,14 +201,14 @@
 					<li>To create opportunities and exploit the available resources to benefit industry /society.</li>
 					<li>To encourage participation in the National Agenda of knowledge building.</li>
 					<li>To foster International collaborations for mutual benefits in areas of research.</li>
-				</ol>
-			</p>
 					<br><br>
-					<iframe src="https://mapsengine.google.com/map/embed?mid=z3fSD2-9Y1ek.kXElf-x_bvOk" width="640" height="480" style="margin-left: 350px;"></iframe>
+					<iframe src="https://mapsengine.google.com/map/embed?mid=z3fSD2-9Y1ek.kXElf-x_bvOk" width="640" height="480"></iframe>
 
-			</div>
-         
-          <div class="tab-pane" id="b">		<h2 >Debate Society</h2>
+
+				</div>
+				<div id="sec1">
+				<div class="content-head"></div>
+				<h2 >Debate Society</h2>
                 
 
 				<p>VIT Chennai’s Debate Society in association with Indian Federation of United Nations Association organised their first Model United Nation with Jamboree India as title sponsor.</p>
@@ -114,28 +220,30 @@
 			    <li>To voice an opinion on current affairs of global importance.</li>
 			    <li>To inculcate a healthy culture of a debating society.</li>
 				</ul>
-			</div>
 
-        <div class="tab-pane" id="c">		<h2 >Secritariat</h2>
-                
+				</div>
+				
+				<div id="sec2">
+				<div class="content-head"></div>
+				<h2 >Secretariat</h2>
+                Lorem ipsum dolorer sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
 
-				<p>VIT Chennai’s Debate Society in association with Indian Federation of United Nations Association organised their first Model United Nation with Jamboree India as title sponsor.</p>
-
-				<h5>AIM & OBJECTIVE:</h5>
-				<ul>
-			    <li>To improve oratory and public speaking skills.</li>
-			    <li>To inculcate rational decision making ability.</li>
-			    <li>To voice an opinion on current affairs of global importance.</li>
-			    <li>To inculcate a healthy culture of a debating society.</li>
-				</ul>
-			</div>
-     
-    </div>
-    </div><!-- /row -->
-
-<hr>
-</div>
-
+				"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque 
+				ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia 
+				voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+				Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi 
+				tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
+				ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in 
+				ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+              	
+				</div>
+				</div>
+		</div>
+	</div>
 	<!-- FOOTER -->
 	<!--div id="f">
 		<div class="container">

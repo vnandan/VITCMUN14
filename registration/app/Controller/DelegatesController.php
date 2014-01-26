@@ -2,7 +2,13 @@
 
 class DelegatesController extends AppController
 {
-	//var $scaffold;
+	public $components = array('Security','Session');
+	
+	public function beforeFilter()
+	{
+	 $this->Security->requirePost('allotments');
+	 $this->Security->unlockedActions = array('allotments');
+	}
 	
 	function index()
 	{
@@ -32,8 +38,20 @@ class DelegatesController extends AppController
 	
 	function allotments($delegateName)
 	{
-		$result = $this->Delegate->find("all", array('conditions' => array('name like' => "%$delegateName%")));	
-		$this->set('delegates',$result);	
+		//echo "<h3>Allotments have not been made yet.</h3>";
+		//$this->autoRender = false;		
+		
+		$this->set('allotmentError',0);
+		if(preg_match('/^[a-zA-Z][a-zA-Z\s]{2,}$/i',$delegateName))
+		{
+			$result = $this->Delegate->find("all", array('conditions' => array('name like' => "%$delegateName%")));	
+			$this->set('delegates',$result);
+		}
+		else
+		{
+			$this->set('allotmentError',1);
+		}
+		
 	}
 
 

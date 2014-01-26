@@ -1,9 +1,16 @@
 <?php
 $this->layout = false;
 
+if($allotmentError==1)
+{
+    echo '<h3>Is that really your name?</h3>';
+    exit;
+}
+
+
 if(empty($delegates))
 {
-    echo "<p>Delegate Allotment information not found.</p>";
+    echo "<h3>Delegate Allotment information not found.</h3>";
     exit;
 }
 ?>

@@ -40,7 +40,7 @@
 
     #content
     {
-    	margin-top: 100px;
+    	margin-top: 80px;
     }
 
    h1,h6
@@ -87,11 +87,11 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="committees.html">COMMITTEES</a></li>
-            <li><a href="works.html">REGISTRATIONS</a></li>
-            <li><a href="works.html">RESOURCES</a></li>
+            <li><a href="/VITCMUN14/index.html">HOME</a></li>
+            <li><a href="/VITCMUN14/about.html">ABOUT</a></li>
+            <li><a href="/VITCMUN14/committees.html">COMMITTEES</a></li>
+            <li><a href="/VITCMUN14/registration/">REGISTRATIONS</a></li>
+            <li><a href="/VITCMUN14/resources.html">RESOURCES</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

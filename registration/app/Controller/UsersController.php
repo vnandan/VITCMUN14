@@ -2,15 +2,16 @@
 class UsersController extends AppController
 {
 // Pass settings in $components array
-	public $components = array('Session','Auth');
+	public $components = array('Security','Session','Auth');
 	
 	public function beforeFilter()
 	{
+	 //$this->Security->requirePost('allot','unallot');
+	 $this->Security->unlockedActions = array('allot','unallot');
 	 $this->Auth->loginAction = array('controller'=>'users','action'=>'login');
 	 $this->Auth->allow('*');
 	 $this->Auth->loginRedirect = array('controller'=>'users','action'=>'index');
 	 $this->Auth->logoutRedirect = array('controller'=>'users','action'=>'login');
-	
 	}
 	
 	public function login() {
@@ -161,3 +162,4 @@ class UsersController extends AppController
 }
 //4184e8dd89aadcb01bc92b339d4df1d2e4f66773
 ?>
+

@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="VIT Chennai Model United Nations Conference 2014">
+    <meta name="keywords" content="VITC, VIT, MUN, VITCMUN">
+    <meta name="author" content="Vipul Nandan">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,100|Raleway:400,100|Lato:400,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
 
-    <title>VITCMUN14</title>
+    <title>VITCMUN14 - HOME</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -29,9 +30,36 @@
     <style type="text/css">
     body{
     	background-color: black;
-      overflow-y: hidden;
+      overflow: hidden;
     }
 
+    #secgenLetter
+    {
+    background: rgba(0,0,0,0);
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    margin-top: -120px;
+    }
+    
+    #Author
+    {
+      position: absolute;
+      float: right;
+      right: -225px;
+      border: #AEAEAE;
+      bottom: 5px;
+      z-index: 200;
+      color: white !important;
+      font-family: sans-serif;
+      font-weight: 400;
+      
+    }
+    #Author:hover
+    {
+      right: 2px;
+    }
+    
     #full-screen-slider {
  	 margin-bottom: 0;
   	z-index: -10;
@@ -63,7 +91,7 @@
 		font-size: 9em;
 		text-align: center;
 		color: white;
-		font-family:  'Lato','raleway','existenceLight',Arial, sans-serif;
+		font-family:  'Lato', sans-serif;
 
 	}
 
@@ -71,7 +99,7 @@
   {
     text-align: center;
     color: white;
-    font-family:  'Lato','existenceLight','Raleway','Josefin Sans',sans-serif;
+    font-family:  'Lato',sans-serif;
     font-weight: 100;
   }
   h1
@@ -82,6 +110,10 @@
   {
   font-size: 0.45em;
   }
+  h3
+  {
+    color: white;
+  }
 
 
   hr{
@@ -91,6 +123,11 @@
   {
     background-color: #000;
   }
+  
+  #modal-body
+  {
+    
+  }
 
 
     </style>
@@ -98,6 +135,46 @@
   </head>
 
   <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=397136957055105";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background: black;">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title" id="myModalLabel">Secretary General's Letter</h3>
+      </div>
+      <div class="modal-body" style="font-family: sans-serif;font-weight: 400;background: white;">
+        <p>As Secretary General, it gives me immense pleasure in introducing to you - "VIT Chennai Model United Nations Conference 2014".</p>
+
+<p>A Model United Nations also known as a MUN is an academic simulation of the United Nations that aims to educate participants about current events, topics in international relations, diplomacy and the United Nations agenda. The participants take on the roles of diplomats, representing a nation or an International Organization in a simulated session of an IGO (Inter - Governmental Organization), such as the UN Security Council, the UN General Assembly or the NATO. Participants research a country, investigate international issues, debate, deliberate, consult, and then develop solutions to world problems. During a conference, participants must employ a variety of communication and critical thinking skills in order to represent the policies of their country. These skills include public speaking, group communication, research, policy analysis, active listening, negotiating, conflict resolution, note taking, and technical writing.</p>
+
+<p>This MUN is the first such endeavour of the Debate Society of VIT University, Chennai Campus to give the leaders of tomorrow a platform to discuss issues affecting the world today. A conference like this will make the students ponder over issues that may not be affecting them, but finding a solution to these problems may be the need of the hour in a different part of the world.</p>
+
+<p>After organizing our first intra-college MUN in September 2012, we are eager to host our first inter-college MUN. The councils we plan on simulating this year are - the UN Security Council, the UN General Assembly, the UN Environment Programme, the European Union and the NATO - OIC Joint Session. These councils will give the students an opportunity to discuss a plethora of issues from all facets of the modern world. Be it Economics, Terrorism, Environment, Politics, Cross-border relations, Regionalism - we strive to cover everything in the councils and this will surely enlighten the minds of the students who come for this conference by helping them understand the role they can play to make this world a better place.</p>
+
+<p>On a closing note, I would like to quote the great Greek philosopher Aristotle here:</p>
+
+<blockquote>Democracy arises out of the notion that - those who are equal in any respect are equal in all respects; because men are equally free, they claim to be absolutely equal"</blockquote>
+
+Thank you and we look forward to seeing representation from your School or College at our conference.
+<br><br>
+<span class="pull-right">Aman Singh, Secretary General</span><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+ 
  
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top"> 
@@ -112,21 +189,28 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">HOME</a></li>
+            <li class="active"><a href="#">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="committees.html">COMMITTEES</a></li>
-            <li><a href="works.html">REGISTRATIONS</a></li>
-            <li><a href="works.html">RESOURCES</a></li>
+            <li><a href="registration">REGISTRATIONS</a></li>
+            <li><a href="resources.html">RESOURCES</a></li>
+            <li style="display: inline;margin-top: 15px;">
+             <div class="fb-like" data-href="https://www.facebook.com/groups/185777251627897/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
+ 
+    
 	<div class="row center" id="centerHeading">
    <div class="col-md-6 col-md-offset-3" col-sm-12>
     <div style="-moz-border-radius: 5px;border-radius: 5px;"><h1>VITCMUN<hr>2014</h1><h6>21-23 March</h6></div>
+    <button class="btn btn-lg" id="secgenLetter" data-toggle="modal" data-target="#myModal">Secretary General's Letter</button>
   </div>
 </div>
+	
+	
 
 <!--CAROUSEL-->
 	<div id="full-screen-slider" class="carousel slide" style="opacity: 0.2;">
@@ -163,6 +247,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+
     $('.carousel').carousel({
     	 interval: 6000,
     	 pause: false
@@ -186,7 +271,7 @@
 });
     
 	</script>
-
+<div id="Author"><span class="glyphicon glyphicon-flag"></span>Greymatter-product of : <a href="https://www.facebook.com/nish.kambhatla" target="_blank">N.</a> and <a href="https://www.facebook.com/vipul.nandan" target="_blank">V.</a></div>
   </body>
 </html>
 
